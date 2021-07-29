@@ -1,2 +1,3 @@
 # EcoEnergy 
-Projeto integrador grupo 6.
+Projeto integrador grupo 6. 
+Generation Brasil.
