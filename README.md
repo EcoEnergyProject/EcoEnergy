@@ -1,6 +1,6 @@
 # EcoEnergy 
 Projeto integrador grupo 6. Generation Brasil.
-Contribuintes:
+<br>Contribuintes:
 <br>Felipe Ferreira da Costa Santos
 <br>Flávia Antunes de Oliveira
 <br>Gabriel Luiz dos Reis
