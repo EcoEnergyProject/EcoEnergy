@@ -1,12 +1,19 @@
 package br.com.ecoenergy.ecoenergy.model;
 
+import java.util.List;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @Entity
 @Table(name = "tb_categoria")
@@ -22,11 +29,17 @@ public class Categoria {
 	
 	@NotNull (message = "O Atributo descrição é obrigatório")
 	@Size(min = 10, max = 2000) 
-	private String descricao_categoria;
+	@Column(name = "descricao_categoria")
+	private String descricaoCategoria;
 	
 	@NotNull (message = "O Atributo palavra chave é obrigatório")
 	@Size(min = 5, max = 100)
-	private String palavra_chave;
+	@Column(name = "palavra_chave")
+	private String palavraChave;
+	
+	@OneToMany(mappedBy = "categoria", cascade = CascadeType.ALL)
+	@JsonIgnoreProperties("categoria")
+	private List<Produto> produto;
 
 	public long getId() {
 		return id;
@@ -44,20 +57,28 @@ public class Categoria {
 		this.tipo = tipo;
 	}
 
-	public String getDescricao_categoria() {
-		return descricao_categoria;
+	public String getDescricaoCategoria() {
+		return descricaoCategoria;
 	}
 
-	public void setDescricao_categoria(String descricao_categoria) {
-		this.descricao_categoria = descricao_categoria;
+	public void setDescricaoCategoria(String descricaoCategoria) {
+		this.descricaoCategoria = descricaoCategoria;
 	}
 
-	public String getPalavra_chave() {
-		return palavra_chave;
+	public String getPalavraChave() {
+		return palavraChave;
 	}
 
-	public void setPalavra_chave(String palavra_chave) {
-		this.palavra_chave = palavra_chave;
+	public void setPalavraChave(String palavraChave) {
+		this.palavraChave = palavraChave;
+	}
+
+	public List<Produto> getProduto() {
+		return produto;
+	}
+
+	public void setProduto(List<Produto> produto) {
+		this.produto = produto;
 	}
 	
 }
