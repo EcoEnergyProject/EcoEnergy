@@ -50,15 +50,16 @@ public class UsuarioController {
 		}
 
 		@PostMapping("/cadastrar")
-		public ResponseEntity<Optional<Usuario>> postUsuario(@RequestBody Usuario usuario) {
-			Optional<Usuario> novoUsuario = usuarioService.cadastrarUsuario(usuario);
+		public ResponseEntity<Usuario> postUsuario(@RequestBody Usuario usuario) {
+			return ResponseEntity.status(HttpStatus.CREATED).body(usuario);
+
+			/*Optional<Usuario> novoUsuario = usuarioService.cadastrarUsuario(usuario);
 			try {
 				return ResponseEntity.status(HttpStatus.CREATED).body(novoUsuario);
 			} catch (Exception e) {
-				return ResponseEntity.badRequest().build();
+				return ResponseEntity.badRequest().build();*/
 			}
 			
-		}
 		
 		@PutMapping("/alterar")
 		public ResponseEntity<Usuario> putUsuario(@RequestBody Usuario usuario){
