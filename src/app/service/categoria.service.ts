@@ -34,4 +34,13 @@ export class CategoriaService {
   postCategoria(categoria: Categoria): Observable<Categoria>{
     return this.http.post<Categoria>(`${environment.apiUrl}/categoria`, categoria, this.token)
   } 
+ // metodo put categoria:
+  putCategoria(categoria: Categoria): Observable<Categoria>{
+    return this.http.put<Categoria>(`${environment.apiUrl}/categoria`, categoria, this.token)
+  }
+
+  // metodo delete categoria:
+  deleteCategoria(id: number) {
+    return this.http.delete(`${environment.apiUrl}/categoria/${id}`, this.token)
+  }
 }

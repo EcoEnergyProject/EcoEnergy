@@ -1,3 +1,6 @@
+
+
+
 .verdin{
     background-color: #97F784;
 }
@@ -129,4 +132,8 @@ h5{
 
 .espacotexto{
     padding-top: 4rem;  
+}
+
+.color{
+    background-image: linear-gradient(white, #97F784 );
 }

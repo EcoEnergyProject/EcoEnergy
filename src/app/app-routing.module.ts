@@ -9,7 +9,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   //{path: "", redirectTo: "inicio", pathMatch:"full"},
-  {path: "", redirectTo: "entrar", pathMatch:"full"},
+  {path: "", redirectTo: "inicio", pathMatch:"full"},
   {path: "entrar", component: EntrarComponent},
   {path: "cadastrar", component: CadastrarComponent},
   {path: "inicio", component: InicioComponent},
