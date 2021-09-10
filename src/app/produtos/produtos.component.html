@@ -1,0 +1,185 @@
+<div class="container-fluid">
+    <div class="row bg-secondary d-flex align-items-center">
+        <div class="col-md-6">
+            <div class="row d-flex justify-content-center">
+                <div class="col-md-6">
+                    <h1 class="text-white">Welcome ma frend!</h1>
+                    <h5>Use esse espaço para expor suas ideias!</h5>
+                </div>
+            </div>
+            <div class="row d-flex justify-content-center mt-5">
+                <div class="col-md-6">
+                    <button class="btn btn-light mr-3" data-toggle="modal" data-target="#exampleModal">Novo johnsons</button>
+                    <a class="btn btn-outline-light" href="#postagens">Ver Postagens</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <img src="https://i.imgur.com/PiWN0y3.png" alt="Imagem de fundo" height="500px">
+        </div>
+    </div>
+</div>
+
+<div class="row d-flex justify-content-center mt-5 mb-5">
+    <div class="col-md-4">
+        <div class="form-group">
+            <input type="text" class="form-control" id="titulo" placeholder="Digite um nome do produto postagem para pesquisar" [(ngModel)]="produto.nomeProduto" (keyup)="findByNomeProduto()"
+            />
+        </div>
+    </div>
+</div>     
+
+<!-- COMEÇO DO MODAL -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Novo cadastro de produto</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+
+            <div class="modal-body">
+                <div class="form-group">
+                    <label for="titulo">Nome do produto</label>
+                    <input [(ngModel)]="produto.nomeProduto" type="text" class="form-control" id="titulo" placeholder="Digite o título">
+                </div>
+
+                <div class="form-group">
+                    <label for="texto">Foto do produto</label>
+                    <textarea [(ngModel)]="produto.foto" class="form-control" name="texto" id="texto" rows="1" placeholder="Insira a URL da imagem do produto"></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="texto">Descricao do produto</label>
+                    <textarea [(ngModel)]="produto.descricao" class="form-control" name="texto" id="texto" rows="3" placeholder="Digite a descrição do produto  "></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="tema">Escolha a categoria desse produto: </label>
+                    <select class="form-control" name="tema" id="tema">
+                        <option disabled selected value>Selecione uma categoria</option>
+                        <option value="solar">Solar</option>
+                        <option value="biogas">Biogás</option>
+                        <option value="eolica">Eólica</option>
+                    </select>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-success" (click)="cadastrar()" data-dismiss="modal">Cadastrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- FIM DO MODAL -->
+
+<body class="containercomcorzinha">
+    <section class="container verdin bordaredonda" id="categorias">
+        <nav>
+            <div class="nav nav-tabs d-flex justify-content-center" id="myTab" role="tablist">
+    
+                <a class="nav-item nav-link active text-secondary font-weight-bold" id="todosProdutos-tab" data-toggle="tab" href="#todosProdutos" role="tab" aria-controls="todosProdutos" aria-selected="true">Todos os produtos</a>
+    
+                <a class="nav-link nav-item text-secondary font-weight-bold" id="energiaSolar-tab" data-toggle="tab" href="#energiaSolar" role="tab" aria-controls="energiaSolar" aria-selected="false">Energia Solar</a>
+    
+                <a class="nav-link nav-item text-secondary font-weight-bold" id="energiaBiogas-tab" data-toggle="tab" href="#energiaBiogas" role="tab" aria-controls="energiaBiogas" aria-selected="false">Energia Biogás</a>
+
+                <a class="nav-link nav-item text-secondary font-weight-bold" id="energiaEolica-tab" data-toggle="tab" href="#energiaEolica" role="tab" aria-controls="energiaEolica" aria-selected="false">Energia Eólica</a>
+            </div>
+        </nav>
+        <div class="row cor-navbar">
+        
+            <div class="tab-content mt-5" id="myTabContent">
+            
+                <!-- TDS OS PRODUTOS -->
+                <div class="tab-pane fade show active" id="todosProdutos" role="tabpanel"          aria-labelledby="todosProdutos-tab">
+                    <div class="card-columns">
+                        <div class="card text-center" *ngFor="let item of listaProdutos">
+                
+                            <div class="card" style="width: 18rem;" *ngFor="let item of        listaProdutos">
+                                <a href="*">
+                                <img src="{{item.foto}}" class="card-img-top" alt="...">
+                                </a>
+                                <div class="card-body">
+                                    <h5 class="card-title">{{item.nomeProduto}}</h5>
+                                    <p class="card-text">{{item.descricao}}</p>
+                                    <a href="#" class="btn btn-primary">Saiba mais bb</a>
+                                </div>
+                            </div>   
+                        
+                        </div>
+                    </div>
+                </div>
+                <!-- FIM DE TODOS OS PRODUTOS -->
+            
+                <!-- CATEGORIA DE ENERGIA SOLAR -->
+                <div class="tab-pane fade" id="energiaSolar" role="tabpanel"         aria-labelledby="energiaSolar-tab">
+                    <div class="card-columns">
+                        <div class="card text-center" *ngFor="let item of categoria.produto">
+                            <div class="card" style="width: 18rem;" *ngFor="let item of        listaProdutos">
+                                <a href="*">
+                                <img src="{{item.foto}}" class="card-img-top" alt="...">
+                                </a>
+                                <div class="card-body">
+                                    <h5 class="card-title">{{item.nomeProduto}}</h5>
+                                    <p class="card-text">{{item.descricao}}</p>
+                                    <a href="#" class="btn btn-primary">Saiba mais bb</a>
+                                </div>
+                            </div>   
+                        </div>
+                    </div>
+                </div>
+                <!-- FIM DE CATEGORIA DE ENERGIA SOLAR -->
+            
+                <!-- CATEGORIA DE ENERGIA BIOGÁS -->
+                <div class="tab-pane fade" id="energiaBiogas" role="tabpanel"         aria-labelledby="energiaBiogas-tab">
+                    <div class="card-columns">
+                        <div class="card text-center" *ngFor="let item of categoria.produto">
+                            <div class="card" style="width: 18rem;" *ngFor="let item of        listaProdutos">
+                                <a href="*">
+                                <img src="{{item.foto}}" class="card-img-top" alt="...">
+                                </a>
+                                <div class="card-body">
+                                    <h5 class="card-title">{{item.nomeProduto}}</h5>
+                                    <p class="card-text">{{item.descricao}}</p>
+                                    <a href="#" class="btn btn-primary">Saiba mais bb</a>
+                                </div>
+                            </div>   
+                        </div>
+                    </div>
+                </div>
+                <!-- FIM DE CATEGORIA DE ENERGIA BIOGÁS -->
+
+                <!-- CATEGORIA DE ENERGIA EÓLICA -->
+                <div class="tab-pane fade" id="energiaEolica" role="tabpanel"         aria-labelledby="energiaEolica-tab">
+                    <div class="card-columns">
+                        <div class="card text-center" *ngFor="let item of categoria.produto">
+                            <div class="card" style="width: 18rem;" *ngFor="let item of        listaProdutos">
+                                <a href="*">
+                                <img src="{{item.foto}}" class="card-img-top" alt="...">
+                                </a>
+                                <div class="card-body">
+                                    <h5 class="card-title">{{item.nomeProduto}}</h5>
+                                    <p class="card-text">{{item.descricao}}</p>
+                                    <a href="#" class="btn btn-primary">Saiba mais bb</a>
+                                </div>
+                            </div>   
+                        </div>
+                    </div>
+                </div>
+                <!-- FIM DE CATEGORIA DE ENERGIA EÓLICA -->
+            </div>
+        </div>
+
+<div class="row mb-5">
+    
+</div>
+
+<div class="row fototexto rowsfototexto">
+    
+</div>
+</section>
+</body>

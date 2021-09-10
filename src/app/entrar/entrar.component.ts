@@ -10,7 +10,6 @@ import { AuthService } from '../service/auth.service';
   styleUrls: ['./entrar.component.css']
 })
 export class EntrarComponent implements OnInit {
-
   usuarioLogin: UsuarioLogin = new UsuarioLogin();
 
   constructor(
@@ -37,5 +36,4 @@ export class EntrarComponent implements OnInit {
       }
     })
   }
-
 }

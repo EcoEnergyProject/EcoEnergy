@@ -12,6 +12,9 @@ import { ContateNosComponent } from './contate-nos/contate-nos.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { CadastrarComponent } from './cadastrar/cadastrar.component';
 import { EntrarComponent } from './entrar/entrar.component';
+import { ProdutosComponent } from './produtos/produtos.component';
+import { CategoriaEditComponent } from './edit/categoria-edit/categoria-edit.component';
+import { CategoriaComponent } from './categoria/categoria.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +26,9 @@ import { EntrarComponent } from './entrar/entrar.component';
     InicioComponent,
     CadastrarComponent,
     EntrarComponent,
+    ProdutosComponent,
+    CategoriaEditComponent,
+    CategoriaComponent,
   ],
   imports: [
     BrowserModule,

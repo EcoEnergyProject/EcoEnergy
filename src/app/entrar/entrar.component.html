@@ -1,21 +1,22 @@
-<div class="container-fluid">
+<div class="container-fluid" id="img-bg">
 
-    <div class="row d-flex align-items-center">
+    <div class="row">
+        <div class="col-md-12">
 
-        <div class="col-md-6">
-
-            <div class="row d-flex justify-content-center">
-                <div class="col-md-6">
+            <div class="row vh-100 d-flex justify-content-center align-items-center">
+                <div class="col-md-4 bgform">
 
                     <h1 class="text-center mb-3">Entrar</h1>
-
+                    
                     <div class="form-group">
                         <label for="email">Email</label>
+                        <span class="fa fa-user form-control-icon"></span>
                         <input class="form-control" type="text" name="email" id="email" placeholder="Seu endereço de email" [(ngModel)] = "usuarioLogin.email"> 
                     </div>
 
                     <div class="form-group">
                         <label for="senha">Senha</label>
+                        <span class="fa fa-user form-control-icon"></span>
                         <input class="form-control" type="password" name="senha" id="senha" placeholder="Sua senha" [(ngModel)] = "usuarioLogin.senha">
                     </div>
 
@@ -31,13 +32,26 @@
 
                 </div>
             </div>
-
         </div>
-
-        <div class="col-md-6" id="img-bg">
-            
-        </div>
-
     </div>
-
 </div>
+<!-- <script>
+    const emailText = document.querySelector(".email");
+
+    function focusFunc(){
+        let parent = this.parentNode.parentNode;
+        parent.classList.add('focus');
+    }
+    function blurFunc(){
+        let parent = this.parentNode.parentNode;
+        if(this.value == ""){
+            parent.classList.add('focus')
+        }
+        parent.classList.add('focus');
+    }
+
+    emailText.forEach(input => {
+        input.addEventListener("focus", focusFunc)
+        input.addEventListener("blur", blurFunc)
+    })
+</script> -->

@@ -7,6 +7,7 @@ export class Produto{
     public descricao: string;
     public id: number;
     public nomeProduto: string;
+    public foto: string;
     public usuario: Usuario;
     public valor: number;
 }

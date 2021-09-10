@@ -1,0 +1,13 @@
+.containercomcorzinha{
+    background-image:url("/assets/imgs/natureza2modificado.gif");
+    background-position: center;
+    background-size: cover;    
+    background-repeat: repeat-y;
+    background-attachment: fixed;
+    height: 100%;
+    width: 100%;
+}
+
+.verdin{
+    background-color: #b9faac;
+}

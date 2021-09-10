@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
+.verdinnav{
+    background:
+    linear-gradient( rgb(185,250,172), 0.03%, rgb(255, 255, 255, 0.9));
+}
+
+.teste{
+    margin-left: 8px;
+    font-size: 25pt;
+}
+
+.containercomcorzinha{
+    background-image:url("/assets/imgs/natureza2modificado.gif");
+    background-position: center;
+    background-size: cover;    
+    background-repeat: repeat-y;
+    background-attachment: fixed;
+    height: 100%;
+    width: 100%;
+}
+
+.verdin{
+    background-color: #b9faac;
+}
+
+.branco{
+    background-color: white;
+}
+
+*{
+    font-family: "Righteous", sans-serif;
+    font-size: 1rem;
+}
+
+li a{
+    font-family: "Righteous", sans-serif;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+}
+
+.fontezonacadastro{
+    font-family: "Righteous", sans-serif;
+    color: #9D9F9E;
+    font-size: 1rem;
+    font-style:normal;
+}
+
+ul li{
+    display: flex;
+    align-items: center;
+    /* alinha na vertical; */
+    justify-content: space-between;
+    /* alinha na horizontal; */
+    height: 15px;
+    padding: 0 20px;
+}
+
+.bordaredonda{
+    border-radius: 25px;
+}
+
+#navbar {
+    background-color: #333; /* Black background color */
+    position: fixed; /* Make it stick/fixed */
+    top: 0; /* Stay on top */
+    width: 100%; /* Full width */
+    transition: top 0.3s; /* Transition effect when sliding down (and up) */
+}
+/* 
+#navbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    text-decoration: none;
+}
+
+#navbar a:hover {
+    background-color: #ddd;
+    color: black;
+} */
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap');
+
+a{
+    font-family: "Poppins", sans-serif;
+    color: #372a25;
+    font-size: 1rem;
+}
+p{
+    font-family: "Open Sans", sans-serif;
+    color: #9d9f9e;
+}
+
+h1{
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    color: #000002;
+    font-size: 3.2rem;
+}
+
+h1 span{
+    color: #f99c80;
+}
+
+h3{
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.1rem;
+    color: #9d9f9e;
+}
+
+h4{
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    color: #000002;
+    font-size: 1.8rem;
+}
+
+h5{
+    font-family: "Poppins", sans-serif;
+    color: #000002;
+    font-size: 1.1rem;
+}
+
+.centralizar-links{
+    margin: 0 auto;
+}
+
+.cor-navbar{
+    background-color: #fff0e9;
+}
+
+.botao-navbar{
+    background-color: #f99c80;
+    color: #fff3e6;
+    padding: 8px 18px;
+    border-radius: 8px;
+}
+
+.botao-navbar:hover{
+    color: #fff3e6;
+    background-color: #ff7d56;
+    transition: 0.2s;
+}
+
+.chamadabox{
+    padding-top: 3rem;
+    padding-left: 2rem;
+}
+
+.features{
+    background-color: #fff0e9;
+    color: #daaa9d;
+    padding: 5px 15px;
+    border-radius: 25px;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    font-family: "Poppins", sans-serif;
+}
+
+.fototexto{
+    margin-top: 8rem;
+}
+
+.rowsfototexto{
+    margin-bottom: 5rem;
+}
+
+.espacotexto{
+    padding-top: 4rem;  
+}
