@@ -1,0 +1,37 @@
+#img-bg{
+    background-image: url("https://i.imgur.com/VcqsnNt.gif");
+
+    min-height: 100vh;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.bgform{
+    padding: 30px;
+    border-radius: 30px;
+    background-color: white;
+    opacity: 88%;
+    
+}
+
+.form-group .form-control {
+    padding-left: 2.375rem;
+  }
+  
+  
+  .form-group .form-control-icon {
+    position: absolute;
+    z-index: 2;
+    display: block;
+    width: 2.375rem;
+    height: 2.375rem;
+    line-height: 2.375rem;
+    text-align: center;
+    pointer-events: none;
+    color: black;
+  }
+  
+

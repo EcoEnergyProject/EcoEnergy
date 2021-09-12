@@ -6,17 +6,25 @@
 
             <div class="row d-flex justify-content-center">
                 <div class="col-md-4 bgform">
+                    <div class="col-md-12 d-flex justify-content-center">
+                        <img class="imgLogo gif-container" id="imgLogo" src="https://i.imgur.com/s4JIAWm.gif" alt=""
+                            width="80" height="80">
+                    </div>
 
                     <h1 class="text-center mb-3">Entrar</h1>
 
                     <div class="form-group">
-                        <label for="email">Email</label>
-                        <input class="form-control" type="text" name="email" id="email" placeholder="Seu endereço de email" [(ngModel)] = "usuarioLogin.email"> 
+                        <label for="email"></label>
+                        <span class="fa fa-envelope form-control-icon"></span>
+                        <input class="form-control" type="text" name="email" id="email" placeholder="E-mail"
+                            [(ngModel)]="usuarioLogin.email">
                     </div>
 
                     <div class="form-group">
-                        <label for="senha">Senha</label>
-                        <input class="form-control" type="password" name="senha" id="senha" placeholder="Sua senha" [(ngModel)] = "usuarioLogin.senha">
+                        <label for="senha"></label>
+                        <span class="fa fa-unlock-alt form-control-icon"></span>
+                        <input class="form-control" type="password" name="senha" id="senha" placeholder="Senha"
+                            [(ngModel)]="usuarioLogin.senha">
                     </div>
 
                     <div class="d-flex justify-content-center">
@@ -24,7 +32,7 @@
                     </div>
 
                     <hr class="mt-5 mb-5">
-                    
+
                     <p class="text-center">
                         Não tem uma conta?<a routerLink="/cadastrar"> Cadastre-se</a>
                     </p>

@@ -1,0 +1,46 @@
+@import url('http://fonts.cdnfonts.com/css/gagalin');
+
+
+h1{
+    font-family: 'Gagalin', sans-serif;
+    padding: 20px;
+}
+
+h4{
+    font-family: 'Gagalin', sans-serif;
+    padding: 10px;
+}
+
+.fa-github:hover {
+    color: #a4d42b;
+    }
+
+.fa-linkedin-square:hover {
+      color: #a4d42b;
+        }
+
+ul.social-network{
+    list-style: none;
+    padding: 10px;
+}
+
+ul.social-network li{
+    display: inline;
+    padding: 10px;
+    
+}
+.fa{
+    font-size: 35pt;
+    padding: 10px;
+
+    
+}
+.fa-github{
+    color: black;
+    
+    
+}
+.fa-linkedin-square{
+    color:#0072b1;
+}
+
